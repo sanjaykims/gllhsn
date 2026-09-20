@@ -9,9 +9,9 @@ export type Leader = {
 };
 
 export const leadership: Leader[] = [
-  { role: "지휘자", name: "성함을 입력해주세요", note: "" },
-  { role: "반주자", name: "성함을 입력해주세요", note: "" },
-  { role: "성가대장", name: "성함을 입력해주세요", note: "" },
+  { role: "지휘자", name: "이관호 장로", note: "" },
+  { role: "반주자", name: "김민지 집사", note: "" },
+  { role: "성가대장", name: "양맹식 권사", note: "" },
 ];
 
 export type Part = {

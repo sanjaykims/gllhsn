@@ -31,16 +31,16 @@ export default function Home() {
             </h1>
             <div className="mt-10 flex flex-wrap items-center gap-6">
               <Link
-                href="/about"
+                href="/audio"
                 className="border border-accent bg-accent px-7 py-3 text-sm font-semibold text-white transition-colors hover:bg-transparent hover:text-accent-soft"
               >
-                성가대 소개 보기
+                주간 찬양
               </Link>
               <Link
-                href="/join"
+                href="/scores"
                 className="border-b border-white/40 pb-0.5 text-sm font-semibold text-white transition-colors hover:border-white hover:text-accent-soft"
               >
-                새가족 안내
+                악보 자료실
               </Link>
             </div>
           </div>

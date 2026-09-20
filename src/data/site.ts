@@ -14,8 +14,8 @@ export const site = {
   contactEmail: "", // 대표 연락처 이메일
   kakaoChannel: "", // 카카오채널 오픈채팅 링크 등
   rehearsal: {
-    day: "요일을 입력해주세요",
-    time: "시간을 입력해주세요",
-    place: "장소를 입력해주세요",
+    day: "매주 주일 (점심식사 직후)",
+    time: "오후 1시 ~ 1시 30분",
+    place: "아동부 예배실",
   },
 };
