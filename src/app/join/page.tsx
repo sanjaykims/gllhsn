@@ -33,22 +33,18 @@ export default function JoinPage() {
       <section className="border-b border-border bg-background-alt">
         <div className="mx-auto max-w-6xl px-5 py-16">
           <SectionHeading
-            eyebrow="Join Us"
             title="새가족 안내"
             description={`노래를 사랑하고 찬양을 통해 하나님께 영광 돌리고 싶은 ${site.churchName} 성도님이라면 누구나 ${site.choirName}에 함께하실 수 있습니다.`}
           />
         </div>
       </section>
 
-      <section className="mx-auto max-w-4xl px-5 py-16">
-        <ol className="space-y-5">
+      <section className="mx-auto max-w-3xl px-5 py-16">
+        <ol className="border-y border-border">
           {steps.map((s, i) => (
-            <li
-              key={s.title}
-              className="flex gap-5 rounded-2xl border border-border bg-white/60 p-6 shadow-sm"
-            >
-              <span className="font-display flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-primary text-sm font-bold text-accent-soft">
-                {i + 1}
+            <li key={s.title} className="flex gap-6 border-b border-border py-6 last:border-0">
+              <span className="font-display w-8 shrink-0 text-2xl font-bold text-accent/70">
+                {String(i + 1).padStart(2, "0")}
               </span>
               <div>
                 <p className="font-medium text-primary">{s.title}</p>
@@ -58,7 +54,7 @@ export default function JoinPage() {
           ))}
         </ol>
 
-        <div className="mt-10 rounded-2xl bg-primary p-8 text-center text-white">
+        <div className="mt-10 border border-primary bg-primary p-8 text-center text-white">
           <p className="font-display text-xl font-semibold">
             함께 찬양할 새가족을 기다립니다
           </p>
@@ -70,7 +66,7 @@ export default function JoinPage() {
                   href={site.kakaoChannel}
                   target="_blank"
                   rel="noreferrer"
-                  className="underline"
+                  className="border-b border-white/40 pb-0.5 hover:border-white"
                 >
                   카카오채널로 문의하기
                 </a>

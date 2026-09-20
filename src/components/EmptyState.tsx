@@ -6,7 +6,7 @@ export default function EmptyState({
   description: string;
 }) {
   return (
-    <div className="rounded-2xl border border-dashed border-border bg-background-alt/60 px-6 py-16 text-center">
+    <div className="border border-dashed border-border bg-background-alt/60 px-6 py-16 text-center">
       <p className="font-display text-lg font-semibold text-primary">
         {title}
       </p>

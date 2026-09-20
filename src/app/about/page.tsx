@@ -7,15 +7,6 @@ export const metadata: Metadata = {
   title: `성가대 소개 | ${site.choirName}`,
 };
 
-function Initials({ name }: { name: string }) {
-  const initial = name.trim().charAt(0) || "♪";
-  return (
-    <div className="flex h-20 w-20 items-center justify-center rounded-full bg-primary text-2xl font-semibold text-accent-soft">
-      {initial}
-    </div>
-  );
-}
-
 export default function AboutPage() {
   const totalMembers = parts.reduce((sum, p) => sum + p.count, 0);
 
@@ -24,42 +15,39 @@ export default function AboutPage() {
       <section className="border-b border-border bg-background-alt">
         <div className="mx-auto max-w-6xl px-5 py-16">
           <SectionHeading
-            eyebrow="About"
             title="성가대 소개"
             description={`${site.churchName} ${site.service}에서 찬양을 섬기는 ${site.choirName}입니다.`}
           />
         </div>
       </section>
 
-      {/* Leadership */}
-      <section className="mx-auto max-w-6xl px-5 py-16">
-        <h3 className="font-display text-xl font-semibold text-primary">
+      {/* Leadership — a masthead-style credits list, not identical cards */}
+      <section className="mx-auto max-w-3xl px-5 py-16">
+        <h3 className="kicker text-xs font-medium uppercase tracking-[0.2em]">
           섬기는 사람들
         </h3>
-        <div className="mt-6 grid grid-cols-1 gap-6 sm:grid-cols-3">
+        <ul className="mt-6 divide-y divide-border border-y border-border">
           {leadership.map((l) => (
-            <div
+            <li
               key={l.role}
-              className="flex flex-col items-center rounded-2xl border border-border bg-white/60 p-8 text-center shadow-sm"
+              className="flex items-baseline justify-between gap-6 py-5"
             >
-              <Initials name={l.name} />
-              <p className="mt-4 text-xs font-semibold uppercase tracking-wider text-accent">
+              <span className="text-sm font-semibold uppercase tracking-[0.15em] text-accent">
                 {l.role}
-              </p>
-              <p className="mt-1 font-medium text-primary">{l.name}</p>
-              {l.note && (
-                <p className="mt-1 text-sm text-foreground-muted">{l.note}</p>
-              )}
-            </div>
+              </span>
+              <span className="font-display flex-1 text-right text-lg font-medium text-primary">
+                {l.name}
+              </span>
+            </li>
           ))}
-        </div>
+        </ul>
       </section>
 
-      {/* Parts */}
+      {/* Parts — a rule-divided data row, not boxed cards */}
       <section className="border-t border-border bg-background-alt">
         <div className="mx-auto max-w-6xl px-5 py-16">
           <div className="flex flex-wrap items-end justify-between gap-3">
-            <h3 className="font-display text-xl font-semibold text-primary">
+            <h3 className="kicker text-xs font-medium uppercase tracking-[0.2em]">
               파트 구성
             </h3>
             {totalMembers > 0 && (
@@ -68,13 +56,10 @@ export default function AboutPage() {
               </p>
             )}
           </div>
-          <div className="mt-6 grid grid-cols-2 gap-4 sm:grid-cols-4">
+          <div className="mt-6 grid grid-cols-2 divide-y divide-border border-y border-border sm:grid-cols-4 sm:divide-x sm:divide-y-0">
             {parts.map((p) => (
-              <div
-                key={p.name}
-                className="rounded-2xl border border-border bg-white/60 p-6 text-center shadow-sm"
-              >
-                <p className="font-display text-2xl font-bold text-primary">
+              <div key={p.name} className="px-4 py-6 text-center">
+                <p className="font-display text-3xl font-bold text-primary">
                   {p.count}
                 </p>
                 <p className="mt-1 text-sm font-medium text-foreground">
@@ -93,23 +78,20 @@ export default function AboutPage() {
 
       {/* Rehearsal info */}
       <section className="mx-auto max-w-6xl px-5 py-16">
-        <h3 className="font-display text-xl font-semibold text-primary">
+        <h3 className="kicker text-xs font-medium uppercase tracking-[0.2em]">
           정기 연습 안내
         </h3>
-        <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-3">
+        <div className="mt-6 grid grid-cols-1 divide-y divide-border border-y border-border sm:grid-cols-3 sm:divide-x sm:divide-y-0">
           {[
             { label: "요일", value: site.rehearsal.day },
             { label: "시간", value: site.rehearsal.time },
             { label: "장소", value: site.rehearsal.place },
           ].map((item) => (
-            <div
-              key={item.label}
-              className="rounded-2xl border border-border bg-white/60 p-6 shadow-sm"
-            >
-              <p className="text-xs font-semibold uppercase tracking-wider text-accent">
+            <div key={item.label} className="px-4 py-6">
+              <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-accent">
                 {item.label}
               </p>
-              <p className="mt-1 font-medium text-primary">{item.value}</p>
+              <p className="mt-1.5 font-medium text-primary">{item.value}</p>
             </div>
           ))}
         </div>

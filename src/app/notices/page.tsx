@@ -9,17 +9,14 @@ export const metadata: Metadata = {
 
 export default function NoticesPage() {
   return (
-    <div className="mx-auto max-w-4xl px-5 py-16">
-      <SectionHeading eyebrow="Notice" title="공지사항" />
+    <div className="mx-auto max-w-3xl px-5 py-16">
+      <SectionHeading title="공지사항" />
 
-      <div className="mt-10 space-y-3">
+      <div className="mt-10 divide-y divide-border border-y border-border">
         {notices.map((n) => (
-          <details
-            key={n.id}
-            className="group rounded-2xl border border-border bg-white/60 p-5 open:shadow-sm"
-          >
+          <details key={n.id} className="group py-5">
             <summary className="flex cursor-pointer list-none items-center gap-4">
-              <span className="shrink-0 rounded-full bg-accent-soft px-3 py-1 text-xs font-semibold text-primary-dark">
+              <span className="shrink-0 border border-accent/40 px-2.5 py-0.5 text-[11px] font-semibold text-accent">
                 {n.category}
               </span>
               <span className="font-medium text-primary">{n.title}</span>

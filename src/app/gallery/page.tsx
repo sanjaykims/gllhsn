@@ -13,7 +13,6 @@ export default function GalleryPage() {
   return (
     <div className="mx-auto max-w-6xl px-5 py-16">
       <SectionHeading
-        eyebrow="Gallery"
         title="사진 갤러리"
         description="성가대의 소중한 순간들을 모았습니다."
       />
@@ -30,7 +29,7 @@ export default function GalleryPage() {
           {gallery.map((g) => (
             <figure
               key={g.id}
-              className="group relative aspect-square overflow-hidden rounded-xl border border-border bg-background-alt"
+              className="group relative aspect-square overflow-hidden border border-border bg-background-alt"
             >
               <Image
                 src={g.src}

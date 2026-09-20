@@ -49,3 +49,39 @@ body {
   background: var(--accent-soft);
   color: var(--primary-dark);
 }
+
+/* Signature motif: fine staff-lines, standing in for a music staff.
+   Used instead of a blurred gradient glow. */
+.staff-lines {
+  background-image: repeating-linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.14) 0px,
+    rgba(255, 255, 255, 0.14) 1px,
+    transparent 1px,
+    transparent 22px
+  );
+}
+
+.staff-lines-ink {
+  background-image: repeating-linear-gradient(
+    to bottom,
+    rgba(58, 15, 52, 0.08) 0px,
+    rgba(58, 15, 52, 0.08) 1px,
+    transparent 1px,
+    transparent 22px
+  );
+}
+
+.kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: var(--foreground-muted);
+}
+.kicker::before {
+  content: "";
+  display: inline-block;
+  width: 1.75rem;
+  height: 1px;
+  background: var(--accent);
+}

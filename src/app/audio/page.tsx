@@ -13,7 +13,6 @@ export default function AudioPage() {
   return (
     <div className="mx-auto max-w-3xl px-5 py-16">
       <SectionHeading
-        eyebrow="Weekly Praise"
         title="주간 찬양"
         description="주일 예배 찬양 음원입니다. 제목을 클릭하면 바로 재생됩니다."
       />

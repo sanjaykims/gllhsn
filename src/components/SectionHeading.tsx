@@ -12,11 +12,11 @@ export default function SectionHeading({
   return (
     <div className={align === "center" ? "text-center" : "text-left"}>
       {eyebrow && (
-        <p className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">
+        <p className="kicker text-xs font-medium uppercase tracking-[0.2em]">
           {eyebrow}
         </p>
       )}
-      <h2 className="font-display mt-2 text-3xl font-bold text-primary sm:text-4xl">
+      <h2 className="font-display mt-3 text-3xl font-bold text-primary sm:text-4xl">
         {title}
       </h2>
       {description && (

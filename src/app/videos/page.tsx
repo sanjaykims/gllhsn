@@ -12,7 +12,6 @@ export default function VideosPage() {
   return (
     <div className="mx-auto max-w-6xl px-5 py-16">
       <SectionHeading
-        eyebrow="Videos"
         title="찬양 영상"
         description="지난 예배 찬양 영상을 다시 볼 수 있습니다."
       />
@@ -29,7 +28,7 @@ export default function VideosPage() {
           {videos.map((v) => (
             <div
               key={v.id}
-              className="overflow-hidden rounded-2xl border border-border bg-white/60 shadow-sm"
+              className="overflow-hidden border border-border"
             >
               <div className="aspect-video w-full">
                 <iframe

@@ -12,7 +12,6 @@ export default function ScoresPage() {
   return (
     <div className="mx-auto max-w-3xl px-5 py-16">
       <SectionHeading
-        eyebrow="Resources"
         title="악보 · 자료실"
         description="연습 악보와 파트연습 자료를 다운로드할 수 있습니다."
       />
@@ -25,16 +24,16 @@ export default function ScoresPage() {
           />
         </div>
       ) : (
-        <ul className="mt-10 divide-y divide-border overflow-hidden rounded-2xl border border-border bg-white/60">
+        <ul className="mt-10 divide-y divide-border border-y border-border">
           {scores.map((s) => (
             <li key={s.id}>
               <a
                 href={s.src}
                 target="_blank"
                 rel="noreferrer"
-                className="flex items-center gap-4 px-6 py-4 transition-colors hover:bg-background-alt"
+                className="flex items-center gap-4 py-4 transition-colors hover:bg-background-alt"
               >
-                <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary">
+                <span className="w-6 shrink-0 text-center text-primary">
                   ↓
                 </span>
                 <span className="flex-1">
