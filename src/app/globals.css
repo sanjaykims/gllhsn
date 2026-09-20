@@ -96,6 +96,16 @@ body {
   }
 }
 
+/* Signature detail: a small music equalizer accent for the choir theme. */
+@keyframes equalize {
+  0%, 100% { transform: scaleY(0.4); }
+  50% { transform: scaleY(1); }
+}
+.equalizer-bar {
+  transform-origin: bottom;
+  animation: equalize 1.1s ease-in-out infinite;
+}
+
 .kicker {
   display: inline-flex;
   align-items: center;

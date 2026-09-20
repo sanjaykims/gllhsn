@@ -1,3 +1,5 @@
+import Reveal from "@/components/Reveal";
+
 export default function SectionHeading({
   eyebrow,
   title,
@@ -10,7 +12,7 @@ export default function SectionHeading({
   align?: "left" | "center";
 }) {
   return (
-    <div className={align === "center" ? "text-center" : "text-left"}>
+    <Reveal className={align === "center" ? "text-center" : "text-left"}>
       {eyebrow && (
         <p className="kicker text-xs font-medium uppercase tracking-[0.2em]">
           {eyebrow}
@@ -26,6 +28,6 @@ export default function SectionHeading({
           {description}
         </p>
       )}
-    </div>
+    </Reveal>
   );
 }

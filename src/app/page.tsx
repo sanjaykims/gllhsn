@@ -1,5 +1,7 @@
 import Link from "next/link";
 import SectionHeading from "@/components/SectionHeading";
+import Reveal from "@/components/Reveal";
+import Equalizer from "@/components/Equalizer";
 import { site } from "@/data/site";
 import { notices } from "@/data/notices";
 import { audioTracks } from "@/data/audio";
@@ -22,17 +24,20 @@ export default function Home() {
           }}
         />
         <div className="relative mx-auto grid max-w-6xl grid-cols-1 gap-10 px-5 py-24 sm:py-28 md:grid-cols-[1.3fr_0.7fr] md:items-end">
-          <div>
-            <p className="text-xs font-medium uppercase tracking-[0.3em] text-white/60">
-              {site.churchName} · {site.service}
-            </p>
+          <Reveal>
+            <div className="flex items-center gap-3">
+              <p className="text-xs font-medium uppercase tracking-[0.3em] text-white/60">
+                {site.churchName} · {site.service}
+              </p>
+              <Equalizer className="h-3.5" />
+            </div>
             <h1 className="font-display mt-6 max-w-2xl text-5xl font-black leading-[1.1] tracking-tight sm:text-7xl">
               {site.choirName}
             </h1>
             <div className="mt-10 flex flex-wrap items-center gap-6">
               <Link
                 href="/audio"
-                className="border border-accent bg-accent px-7 py-3 text-sm font-semibold text-white transition-colors hover:bg-transparent hover:text-accent-soft"
+                className="rounded-full border border-accent bg-accent px-7 py-3 text-sm font-semibold text-white transition-[transform,background-color,color] duration-150 hover:bg-transparent hover:text-accent-soft active:scale-95"
               >
                 주간 찬양
               </Link>
@@ -43,13 +48,16 @@ export default function Home() {
                 악보 자료실
               </Link>
             </div>
-          </div>
-          <p className="font-display border-l border-white/25 pl-6 text-lg italic leading-relaxed text-white/75 md:text-xl">
+          </Reveal>
+          <Reveal
+            delayMs={150}
+            className="font-display border-l border-white/25 pl-6 text-lg italic leading-relaxed text-white/75 md:text-xl"
+          >
             &ldquo;{site.tagline}&rdquo;
             <span className="mt-2 block text-sm not-italic tracking-wide text-white/45">
               {site.verseRef}
             </span>
-          </p>
+          </Reveal>
         </div>
       </section>
 
@@ -63,13 +71,13 @@ export default function Home() {
               value: `${site.rehearsal.day} · ${site.rehearsal.time}`,
             },
             { label: "장소", value: site.rehearsal.place },
-          ].map((item) => (
-            <div key={item.label} className="px-2 py-6 text-center sm:px-6">
+          ].map((item, i) => (
+            <Reveal key={item.label} delayMs={i * 100} className="px-2 py-6 text-center sm:px-6">
               <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-accent">
                 {item.label}
               </p>
               <p className="mt-1.5 font-medium text-primary">{item.value}</p>
-            </div>
+            </Reveal>
           ))}
         </div>
       </section>
@@ -121,16 +129,16 @@ export default function Home() {
             </Link>
           </div>
           <ul className="mt-8 divide-y divide-border border-y border-border">
-            {recentNotices.map((n) => (
-              <li key={n.id} className="flex items-start gap-4 py-5">
-                <span className="mt-0.5 shrink-0 border border-accent/40 px-2.5 py-0.5 text-[11px] font-semibold text-accent">
+            {recentNotices.map((n, i) => (
+              <Reveal key={n.id} delayMs={i * 100} as="li" className="flex items-start gap-4 py-5">
+                <span className="mt-0.5 shrink-0 rounded-full border border-accent/40 px-2.5 py-0.5 text-[11px] font-semibold text-accent">
                   {n.category}
                 </span>
                 <div>
                   <p className="font-medium text-primary">{n.title}</p>
                   <p className="mt-1 text-xs text-foreground-muted">{n.date}</p>
                 </div>
-              </li>
+              </Reveal>
             ))}
           </ul>
         </div>
@@ -139,7 +147,7 @@ export default function Home() {
       {/* Pull-quote band — full-bleed, plum + staff lines, one strong element */}
       <section className="relative overflow-hidden bg-primary py-24 text-white">
         <div aria-hidden className="staff-lines pointer-events-none absolute inset-0" />
-        <div className="relative mx-auto max-w-3xl px-5 text-center">
+        <Reveal className="relative mx-auto max-w-3xl px-5 text-center">
           <p className="font-display text-2xl italic leading-snug sm:text-3xl">
             &ldquo;새 노래로 여호와께 노래하라 온 땅이여 여호와께 노래할지어다&rdquo;
           </p>
@@ -155,7 +163,7 @@ export default function Home() {
               악보 · 자료실
             </Link>
           </div>
-        </div>
+        </Reveal>
       </section>
 
       {/* Join CTA */}
@@ -167,7 +175,7 @@ export default function Home() {
         />
         <Link
           href="/join"
-          className="mt-8 inline-block border border-primary bg-primary px-8 py-3 text-sm font-semibold text-white transition-colors hover:bg-transparent hover:text-primary"
+          className="mt-8 inline-block rounded-full border border-primary bg-primary px-8 py-3 text-sm font-semibold text-white transition-[transform,background-color,color] duration-150 hover:bg-transparent hover:text-primary active:scale-95"
         >
           새가족 안내 보러가기
         </Link>

@@ -1,6 +1,6 @@
-# 호산나 성가대 (갈릴리교회)
+# 호산나찬양대 (갈릴리교회)
 
-갈릴리교회 호산나 성가대 홈페이지입니다. Next.js(App Router) + TypeScript + Tailwind CSS로 제작되었습니다.
+갈릴리교회 호산나찬양대 홈페이지입니다. Next.js(App Router) + TypeScript + Tailwind CSS로 제작되었습니다.
 
 ## 개발 서버 실행
 
