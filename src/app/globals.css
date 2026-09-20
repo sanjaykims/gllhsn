@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+:root {
+  --background: #fdfbfa;
+  --background-alt: #f6eef1;
+  --foreground: #221a1f;
+  --foreground-muted: #6b5c64;
+  --primary: #3a0f34;
+  --primary-dark: #220a1f;
+  --accent: #c23b6e;
+  --accent-soft: #f3d9e3;
+  --border: #ecdfe4;
+  --font-sans-stack: "Pretendard Variable", Pretendard, "Apple SD Gothic Neo",
+    "Malgun Gothic", -apple-system, BlinkMacSystemFont, system-ui,
+    "Segoe UI", sans-serif;
+  --font-serif-stack: "Noto Serif KR", "Apple SD Gothic Neo", "Batang",
+    ui-serif, Georgia, serif;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-background-alt: var(--background-alt);
+  --color-foreground: var(--foreground);
+  --color-foreground-muted: var(--foreground-muted);
+  --color-primary: var(--primary);
+  --color-primary-dark: var(--primary-dark);
+  --color-accent: var(--accent);
+  --color-accent-soft: var(--accent-soft);
+  --color-border: var(--border);
+  --font-sans: var(--font-sans-stack);
+  --font-serif: var(--font-serif-stack);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+}
+
+.font-display {
+  font-family: var(--font-serif), ui-serif, Georgia, serif;
+}
+
+::selection {
+  background: var(--accent-soft);
+  color: var(--primary-dark);
+}
