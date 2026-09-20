@@ -16,7 +16,6 @@ export const audioTracks: AudioTrack[] = [
   { id: "2026-07-19-2", dateLabel: "2026-07-19", title: "힘써 일하라", soundcloudUrl: "https://soundcloud.com/sanjaykim/2026-07-19-2" },
   { id: "2026-07-19", dateLabel: "2026-07-19", title: "주일2부예배 봉헌 - 호산나 여성중창", soundcloudUrl: "https://soundcloud.com/sanjaykim/2026-07-19" },
   { id: "2026-07-12", dateLabel: "2026-07-12", title: "2026-07-12", soundcloudUrl: "https://soundcloud.com/sanjaykim/2026-07-12" },
-  { id: "2025-12-07", dateLabel: "2025-12-07", title: "음원합본", soundcloudUrl: "https://soundcloud.com/sanjaykim/2025-12-07" },
   { id: "8a1", dateLabel: "2개월 전", title: "새로운 프로젝트-8", soundcloudUrl: "https://soundcloud.com/sanjaykim/8a1" },
   { id: "7a1", dateLabel: "2개월 전", title: "새로운 프로젝트-7", soundcloudUrl: "https://soundcloud.com/sanjaykim/7a1" },
   { id: "6a1", dateLabel: "2개월 전", title: "새로운 프로젝트-6", soundcloudUrl: "https://soundcloud.com/sanjaykim/6a1" },
