@@ -7,6 +7,18 @@ import { site } from "@/data/site";
 export const metadata: Metadata = {
   title: `${site.choirName} | ${site.churchName}`,
   description: site.description,
+  openGraph: {
+    title: `${site.choirName} | ${site.churchName}`,
+    description: site.description,
+    url: site.churchUrl,
+    locale: "ko_KR",
+    type: "website",
+  },
+  twitter: {
+    card: "summary",
+    title: `${site.choirName} | ${site.churchName}`,
+    description: site.description,
+  },
 };
 
 export default function RootLayout({

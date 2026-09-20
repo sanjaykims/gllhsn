@@ -26,7 +26,7 @@ export default function Home() {
             <p className="text-xs font-medium uppercase tracking-[0.3em] text-white/60">
               {site.churchName} · {site.service}
             </p>
-            <h1 className="font-display mt-6 max-w-2xl text-5xl font-bold leading-[1.1] sm:text-7xl">
+            <h1 className="font-display mt-6 max-w-2xl text-5xl font-black leading-[1.1] tracking-tight sm:text-7xl">
               {site.choirName}
             </h1>
             <div className="mt-10 flex flex-wrap items-center gap-6">
@@ -80,13 +80,24 @@ export default function Home() {
         <div className="mt-8 border border-border bg-background-alt/50 p-6">
           {latestTrack ? (
             <div>
-              <p className="text-sm text-foreground-muted">{latestTrack.date}</p>
+              <p className="text-sm text-foreground-muted">{latestTrack.dateLabel}</p>
               <p className="font-display mt-1 text-xl font-semibold text-primary">
                 {latestTrack.title}
               </p>
-              <audio controls preload="none" className="mt-4 w-full">
-                <source src={latestTrack.src} />
-              </audio>
+              <iframe
+                title={latestTrack.title}
+                className="mt-4 w-full"
+                height={166}
+                allow="autoplay"
+                loading="lazy"
+                src={`https://w.soundcloud.com/player/?${new URLSearchParams({
+                  url: latestTrack.soundcloudUrl,
+                  color: "a16207",
+                  auto_play: "false",
+                  show_user: "true",
+                  visual: "false",
+                }).toString()}`}
+              />
             </div>
           ) : (
             <p className="text-sm text-foreground-muted">

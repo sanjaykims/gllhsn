@@ -47,7 +47,7 @@ export default function Header() {
           aria-label="메뉴 열기"
           aria-expanded={open}
           onClick={() => setOpen((v) => !v)}
-          className="flex h-9 w-9 flex-col items-center justify-center gap-1.5 md:hidden"
+          className="flex h-9 w-9 cursor-pointer flex-col items-center justify-center gap-1.5 md:hidden"
         >
           <span
             className={`h-0.5 w-6 bg-primary transition-transform ${open ? "translate-y-2 rotate-45" : ""}`}
