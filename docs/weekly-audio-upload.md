@@ -45,9 +45,9 @@ Vercel은 **빌드가 실패하면 이전에 성공한 배포를 그대로 서�
   Preview / Development 전체 적용)한 뒤 재배포:
   - `NEXT_PUBLIC_SUPABASE_URL`
   - `NEXT_PUBLIC_SUPABASE_ANON_KEY`
-  - 값은 Supabase 프로젝트 `sermorizer` (project ref `aeygqjuhqjvlhjrslbxd`, Settings → API)에서
-    가져온 URL과 anon/public key입니다. `gllhsn_scores`, `gllhsn_admin_secret` 테이블이 이
-    프로젝트에 있는 것으로 확인했습니다.
+  - 값은 이 사이트가 쓰는 Supabase 프로젝트(Settings → API)에서 가져온 URL과 anon/public
+    key입니다. `gllhsn_scores`, `gllhsn_admin_secret` 테이블이 있는 프로젝트가 맞는지
+    확인하세요.
 - 이 환경변수는 이미 설정 완료된 상태입니다. 만약 다시 같은 에러(`supabaseUrl is required`)로
   빌드가 실패한다면, 누군가 Vercel 프로젝트의 환경변수를 지웠거나 다른 프로젝트로
   재연결된 것이니 위 값을 다시 확인/재설정하세요.
