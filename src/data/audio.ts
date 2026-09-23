@@ -7,6 +7,7 @@ export type AudioTrack = {
 };
 
 export const audioTracks: AudioTrack[] = [
+  { id: "2026-09-20", dateLabel: "2026-09-20", title: "날 위하여 십자가에", soundcloudUrl: "https://on.soundcloud.com/DfPcxrthxOxCyPCeOb" },
   { id: "2026-09-13", dateLabel: "2026-09-13", title: "주의 사랑 넘치네", soundcloudUrl: "https://soundcloud.com/sanjaykim/2026-09-13" },
   { id: "2026-08-30", dateLabel: "2026-08-30", title: "강하고 담대하라", soundcloudUrl: "https://soundcloud.com/sanjaykim/2026-08-30" },
   { id: "2026-08-23", dateLabel: "2026-08-23", title: "오 놀라운 구세주", soundcloudUrl: "https://soundcloud.com/sanjaykim/2026-08-23" },
