@@ -27,6 +27,9 @@ http://localhost:3000 에서 확인할 수 있습니다.
 
 각 파일 상단에 작성 예시와 안내 주석이 있습니다.
 
+매주 새 찬양 음원을 올리는 절차와 배포 관련 트러블슈팅은
+[`docs/weekly-audio-upload.md`](docs/weekly-audio-upload.md)를 참고하세요.
+
 ## 배포 (Vercel)
 
 1. [vercel.com](https://vercel.com)에 GitHub 계정으로 로그인
