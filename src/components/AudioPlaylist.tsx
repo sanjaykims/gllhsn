@@ -21,7 +21,7 @@ export default function AudioPlaylist({ tracks }: { tracks: AudioTrack[] }) {
           <iframe
             title={track.title}
             className="mt-3 w-full"
-            height={166}
+            height={300}
             allow="autoplay"
             loading="lazy"
             src={embedSrc(track.soundcloudUrl)}
